@@ -4,31 +4,27 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SpaceUnit.m"
 
+typedef NS_ENUM(NSInteger, SpaceUnitType) {TypeExperimental , TypeRealTime, TypeModified};
 
 @interface SpaceUnit : NSObject
 
-@property (nonatomic,strong) NSString *id;
+@property NSString *id;
 
-typedef NS_ENUM(NSInteger, SpaceUinitType) {TypeExperimental , TypeRealTime, TypeModified};
+@property NSString *name;
+
+@property NSString* specificationId;
+
+@property NSNumber* groupNumber;
+
+@property NSString* modelSpecifier;
+
+@property SpaceUnitType type;
+
+@property NSUInteger year;
+
+@property NSString* spaceUnitUniqueID;
 
 -(id)initWithUniqueId: (NSString *)string;
-
--(NSString *)name;
-
--(NSString* )specificationId;
-
--(NSNumber*) groupNumber;
-
--(NSString*) modelSpecifier;
-
--(SpaceUinitType) type;
-
--(NSUInteger) year;
-
--(NSString*) spaceUnitUniqueID;
-
-
 
 @end
